@@ -1,0 +1,54 @@
+[project]
+name = "vcollab-mcp-tools"
+version = "0.2.0"
+description = "Production MCP server exposing VCollab CAE/CAX engineering tools over the Model Context Protocol."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Proprietary" }
+authors = [{ name = "VCollab" }]
+keywords = ["mcp", "vcollab", "cae", "cax", "engineering", "simulation"]
+
+dependencies = [
+    "fastmcp>=3,<4",
+    "pydantic>=2.7",
+    "pydantic-settings>=2.3",
+]
+
+[project.scripts]
+vcollab-mcp = "vcollab_mcp.__main__:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.2",
+    "pytest-asyncio>=0.23",
+    "ruff>=0.5",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/vcollab_mcp"]
+
+# ---------------------------------------------------------------------------
+# Tooling
+# ---------------------------------------------------------------------------
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+addopts = "-ra -q"
+markers = [
+    "integration: tests that invoke real VCollab executables (require VCollab installed)",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101"]

@@ -1,0 +1,41 @@
+{
+  "name": "vcollab",
+  "displayName": "VCollab",
+  "version": "0.2.0",
+  "description": "Inspect, convert, merge, and render CAE and CAD simulation files with your local VCollab 26.1+ install on Windows: native results to CAX, CAX metadata, result images, and VCollab Pro XML batch jobs.",
+  "author": {
+    "name": "VCollab",
+    "email": "srinivasamurthi@vcollab.com",
+    "url": "https://www.vcollab.com"
+  },
+  "homepage": "https://github.com/vcollab/vct-marketplace/tree/main/plugins/vcollab-plugin#readme",
+  "repository": "https://github.com/vcollab/vct-marketplace",
+  "license": "MIT",
+  "keywords": [
+    "vcollab",
+    "cae",
+    "cax",
+    "fea",
+    "cfd",
+    "simulation",
+    "engineering"
+  ],
+  "documentationUrl": "https://github.com/vcollab/vct-marketplace/tree/main/plugins/vcollab-plugin#readme",
+  "supportUrl": "https://github.com/vcollab/vct-marketplace/issues",
+  "privacyPolicyUrl": "https://github.com/vcollab/vct-marketplace/blob/main/plugins/vcollab-plugin/PRIVACY.md",
+  "userConfig": {
+    "vcollab_dir": {
+      "type": "directory",
+      "title": "VCollab installation folder",
+      "description": "Leave empty to auto-detect the newest C:\\Program Files\\VCollab\\<version> folder.",
+      "default": ""
+    },
+    "allowed_roots": {
+      "type": "string",
+      "title": "Allowed folders",
+      "description": "Optional. Folders the tools may read and write, separated by ';'. Leave empty to allow any path you name.",
+      "default": ""
+    }
+  },
+  "icon": "./.claude-plugin/icon.png"
+}

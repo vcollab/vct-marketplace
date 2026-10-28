@@ -1,0 +1,14 @@
+{
+  "name": "vct-marketplace",
+  "description": "Plugins for my vcollab team",
+  "owner": {
+    "name": "Srinivas"
+  },
+  "plugins": [
+    {
+      "name": "vcollab",
+      "source": "./plugins/vcollab-plugin",
+      "description": "Work with engineering simulation results from a conversation. This plugin connects Claude to the VCollab installation on your Windows computer, so Claude can inspect native CAE, CAD and JT files, convert them to VCollab's compact CAX format, merge CAX files, render result images, and run VCollab Pro XML batch jobs. Everything runs locally against files you name; nothing is uploaded by the plugin."
+    }
+  ]
+}
