@@ -20,9 +20,6 @@
     "simulation",
     "engineering"
   ],
-  "documentationUrl": "https://github.com/vcollab/vct-marketplace/tree/main/plugins/vcollab-plugin#readme",
-  "supportUrl": "https://github.com/vcollab/vct-marketplace/issues",
-  "privacyPolicyUrl": "https://github.com/vcollab/vct-marketplace/blob/main/plugins/vcollab-plugin/PRIVACY.md",
   "userConfig": {
     "vcollab_dir": {
       "type": "directory",
@@ -36,6 +33,5 @@
       "description": "Optional. Folders the tools may read and write, separated by ';'. Leave empty to allow any path you name.",
       "default": ""
     }
-  },
-  "icon": "./.claude-plugin/icon.png"
+  }
 }
